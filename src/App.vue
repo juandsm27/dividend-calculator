@@ -896,6 +896,8 @@ export default {
       if (this.chartBar.logo) {
         this.chartBar.logo.dispose()
       }
+      this.chartBar.background.fill = am4core.color("#0f0f18");
+      this.chartBar.background.fillOpacity = 1;
       this.chartBar.data = [{
         "date": "",
         "inversioninicial": 0,
@@ -909,6 +911,7 @@ export default {
       var categoryAxis = this.chartBar.xAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = "date";
       categoryAxis.renderer.grid.template.disabled = true;
+      categoryAxis.renderer.labels.template.fill = am4core.color("#6b6b80");
 
       var axisTooltip = categoryAxis.tooltip;
       axisTooltip.background.fill = am4core.color("#000");
@@ -921,6 +924,9 @@ export default {
       var  valueAxis = this.chartBar.yAxes.push(new am4charts.ValueAxis());
       valueAxis.numberFormatter.numberFormat = "'$'#,###.##a|'-$'#,###.##as";
       valueAxis.tooltip.disabled = true;
+      valueAxis.renderer.labels.template.fill = am4core.color("#6b6b80");
+      valueAxis.renderer.grid.template.stroke = am4core.color("#ffffff");
+      valueAxis.renderer.grid.template.strokeOpacity = 0.05;
       valueAxis.numberFormatter.numberFormat = "'$'#,###.##a|'-$'#,###.##as";
       valueAxis.tooltip.disabled = true;
       valueAxis.numberFormatter.bigNumberPrefixes = [
@@ -943,11 +949,11 @@ export default {
 
       // COLORES
       this.chartBar.colors.list = [
-        am4core.color("#123B4F"),
-        am4core.color("#1D5F80"),
-        am4core.color("#E6AE3F"),
-        am4core.color("#659F6B"),
-        am4core.color("#A63838"),
+        am4core.color("#7c6af7"),
+        am4core.color("#4ed8c0"),
+        am4core.color("#f06fba"),
+        am4core.color("#38bdf8"),
+        am4core.color("#fb923c"),
       ];
 
 
@@ -1020,6 +1026,7 @@ export default {
 
       // LEYENDA
       this.chartBar.legend = new am4charts.Legend();
+      this.chartBar.legend.labels.template.fill = am4core.color("#eeeef6");
 
       // BOTON ZOOM-OUT
       this.chartBar.zoomOutButton.disabled = true;
@@ -1106,6 +1113,8 @@ export default {
       if (this.chartBar2.logo) {
         this.chartBar2.logo.dispose()
       }
+      this.chartBar2.background.fill = am4core.color("#0f0f18");
+      this.chartBar2.background.fillOpacity = 1;
       this.chartBar2.data = [{
         "date": "",
         "apreciacionB": 0,
@@ -1117,6 +1126,7 @@ export default {
       categoryAxisB.dataFields.category = "date";
       categoryAxisB.renderer.grid.template.disabled = true;
       categoryAxisB.renderer.minGridDistance = 50;
+      categoryAxisB.renderer.labels.template.fill = am4core.color("#6b6b80");
 
       var axisTooltipB = categoryAxisB.tooltip;
       axisTooltipB.background.fill = am4core.color("#000");
@@ -1129,6 +1139,9 @@ export default {
       var valueAxisB = this.chartBar2.yAxes.push(new am4charts.ValueAxis());
       valueAxisB.numberFormatter.numberFormat = "'$'#,###.00a|'-$'#,###.00as";
       valueAxisB.tooltip.disabled = true;
+      valueAxisB.renderer.labels.template.fill = am4core.color("#6b6b80");
+      valueAxisB.renderer.grid.template.stroke = am4core.color("#ffffff");
+      valueAxisB.renderer.grid.template.strokeOpacity = 0.05;
       valueAxisB.numberFormatter.numberFormat = "'$'#,###.##a|'-$'#,###.##as";
       valueAxisB.tooltip.disabled = true;
       valueAxisB.numberFormatter.bigNumberPrefixes = [
@@ -1151,8 +1164,8 @@ export default {
 
       // COLORES
       this.chartBar2.colors.list = [
-        am4core.color("#496548"),
-        am4core.color("#659F6B"),
+        am4core.color("#7c6af7"),
+        am4core.color("#4ed8c0"),
       ];
 
 
@@ -1191,6 +1204,7 @@ export default {
 
       // LEYENDA
       this.chartBar2.legend = new am4charts.Legend();
+      this.chartBar2.legend.labels.template.fill = am4core.color("#eeeef6");
 
       // BOTON ZOOM-OUT
       this.chartBar2.zoomOutButton.align = "left";
@@ -1284,6 +1298,8 @@ export default {
       if (this.chartBar3.logo) {
         this.chartBar3.logo.dispose()
       }
+      this.chartBar3.background.fill = am4core.color("#0f0f18");
+      this.chartBar3.background.fillOpacity = 1;
       this.chartBar3.data = [{
         "date": "",
         "rendimientodiv": 0,
@@ -1294,6 +1310,7 @@ export default {
       categoryAxis3.dataFields.category = "date";
       categoryAxis3.renderer.grid.template.disabled = true;
       categoryAxis3.renderer.minGridDistance = 50;
+      categoryAxis3.renderer.labels.template.fill = am4core.color("#6b6b80");
 
       var axisTooltip3 = categoryAxis3.tooltip;
       axisTooltip3.background.fill = am4core.color("#000");
@@ -1306,6 +1323,9 @@ export default {
       var valueAxis3 = this.chartBar3.yAxes.push(new am4charts.ValueAxis());
       valueAxis3.numberFormatter.numberFormat = "#,###.##a'%'|'-'#,###.##as'%'";
       valueAxis3.tooltip.disabled = true;
+      valueAxis3.renderer.labels.template.fill = am4core.color("#6b6b80");
+      valueAxis3.renderer.grid.template.stroke = am4core.color("#ffffff");
+      valueAxis3.renderer.grid.template.strokeOpacity = 0.05;
       valueAxis3.numberFormatter.numberFormat = "'$'#,###.##a|'-$'#,###.##as";
       valueAxis3.tooltip.disabled = true;
       valueAxis3.numberFormatter.bigNumberPrefixes = [
@@ -1328,8 +1348,8 @@ export default {
 
       // COLORES
       this.chartBar3.colors.list = [
-        am4core.color("#1D5F80"),
-        am4core.color("#E6AE3F"),
+        am4core.color("#4ed8c0"),
+        am4core.color("#f06fba"),
       ];
 
       // DIVIDEND YIELD
@@ -1374,6 +1394,7 @@ export default {
 
       // LEYENDA
       this.chartBar3.legend = new am4charts.Legend();
+      this.chartBar3.legend.labels.template.fill = am4core.color("#eeeef6");
 
       // BOTON ZOOM-OUT
       this.chartBar3.zoomOutButton.align = "left";
@@ -1444,6 +1465,8 @@ export default {
       if (this.chartBar4.logo) {
         this.chartBar4.logo.dispose()
       }
+      this.chartBar4.background.fill = am4core.color("#0f0f18");
+      this.chartBar4.background.fillOpacity = 1;
       this.chartBar4.data = [{
         "date": "",
         "balanceFinalCR": 0,
@@ -1456,6 +1479,7 @@ export default {
     categoryAxis4.dataFields.category = "date";
     categoryAxis4.renderer.grid.template.disabled = true;
     categoryAxis4.renderer.minGridDistance = 50;
+    categoryAxis4.renderer.labels.template.fill = am4core.color("#6b6b80");
 
     var axisTooltip4 = categoryAxis4.tooltip;
     axisTooltip4.background.fill = am4core.color("#000");
@@ -1468,6 +1492,9 @@ export default {
     var valueAxis4 = this.chartBar4.yAxes.push(new am4charts.ValueAxis());
     valueAxis4.numberFormatter.numberFormat = "'$'#,###.##a|'-$'#,###.##as";
     valueAxis4.tooltip.disabled = true;
+    valueAxis4.renderer.labels.template.fill = am4core.color("#6b6b80");
+    valueAxis4.renderer.grid.template.stroke = am4core.color("#ffffff");
+    valueAxis4.renderer.grid.template.strokeOpacity = 0.05;
     valueAxis4.numberFormatter.bigNumberPrefixes = [
       // { "number": 1e+3, "suffix": "K" },
       // { "number": 1e+6, "suffix": "M" },
@@ -1488,10 +1515,10 @@ export default {
 
     // COLORES
     this.chartBar4.colors.list = [
-      am4core.color("#1D5F80"),
-      am4core.color("#E6AE3F"),
-      am4core.color("#123B4F"),
-      am4core.color("#99742A"),
+      am4core.color("#7c6af7"),
+      am4core.color("#4ed8c0"),
+      am4core.color("#f06fba"),
+      am4core.color("#38bdf8"),
     ];
 
 
@@ -1571,6 +1598,7 @@ export default {
 
     // LEYENDA
     this.chartBar4.legend = new am4charts.Legend();
+    this.chartBar4.legend.labels.template.fill = am4core.color("#eeeef6");
 
     // BOTON ZOOM-OUT
     this.chartBar4.zoomOutButton.align = "left";
