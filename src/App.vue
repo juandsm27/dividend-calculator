@@ -2,6 +2,12 @@
   <v-main>
     <v-container class="mt-16">
 
+      <v-row class="mb-6">
+        <v-col cols="12">
+          <h1 class="calculator-title">Dividend Calculator</h1>
+        </v-col>
+      </v-row>
+
       <v-row>
 
         <!-- INPUTS -->
@@ -1778,6 +1784,14 @@ export default {
   .v-table table tr:hover { background-color: rgba(124,106,247,0.08) !important; color: var(--text) !important; }
 
   .calculator-investment { line-height: 0.5em; }
+
+  .calculator-title {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+    color: var(--text) !important;
+    letter-spacing: 0.02em !important;
+  }
 
   .col-style { padding-bottom: 0 !important; padding-top: 0 !important; }
 
